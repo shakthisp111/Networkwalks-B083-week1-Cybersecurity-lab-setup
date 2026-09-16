@@ -121,6 +121,10 @@ The basic environment consists of a Windows 11 host machine running Oracle Virtu
 
 Oracle VirtualBox was installed on my Windows 11 host machine and used as the virtualization platform for the Kali Linux laboratory.
 
+### Screenshot
+
+![VirtualBox Kali Linux Lab Setup](virtualbox-kali-vm.png)
+
 ---
 
 ## Step 2. Set Up Kali Linux
@@ -151,7 +155,9 @@ The NAT Network allows the Kali Linux virtual machine to communicate with the ga
 Network: 10.0.0.0/24
 Gateway: 10.0.0.1
 ```
+### Screenshot
 
+![NAT Network Configuration](nat-network.png)
 ---
 
 ## Step 4. Configure the Static IPv4 Address
@@ -170,6 +176,10 @@ The IPv4 settings were configured as follows:
 
 The static IP configuration was applied using the Network Connections settings in Kali Linux.
 
+### Screenshot
+
+![Kali Linux Static IPv4 Configuration](kali-ipv4.png)
+
 ## Step 5. Verify the Lab Network
 
 After configuring the network, several commands were used to verify the setup.
@@ -186,6 +196,10 @@ The `eth0` interface showed:
 10.0.0.2/24
 ```
 
+### Screenshot
+
+![Kali IP Address Verification](ip-address.png)
+
 This confirmed that the configured static IP address was assigned.
 
 ### Test Gateway Connectivity
@@ -201,6 +215,10 @@ Result:
 4 packets received
 0% packet loss
 ```
+
+### Screenshot
+
+![Gateway Connectivity Test](Gateway%20ping.png)
 
 This confirmed connectivity between Kali Linux and the configured gateway.
 
@@ -220,6 +238,10 @@ The repeated test completed with:
 0% packet loss
 ```
 
+### Screenshot
+
+![Internet Connectivity Test](./Gateway%20ping.png)
+
 This confirmed successful external connectivity.
 
 ### Test DNS Resolution
@@ -236,11 +258,29 @@ Server: 8.8.8.8
 
 and successfully returned an address for `networkwalks.com`.
 
+### Screenshot
+
+![DNS Resolution Test](dns-resolution.png)
+
 ### Verify Nmap
 
 ```bash
 nmap --version
 ```
+
+The installed version was:
+
+```text
+Nmap version 7.99
+```
+
+### Screenshot
+
+![Nmap Version Verification](nmap-version.png)
+
+This confirmed that Nmap was available and working in the Kali Linux environment.
+
+---
 ## Step 6. Create a Virtual Machine Snapshot
 
 After completing the Kali Linux configuration and network verification, a snapshot was created in VirtualBox.
@@ -259,6 +299,10 @@ The snapshot was created after verifying the static IP address, gateway connecti
 
 This allows the virtual machine to be restored to a known working state if any configuration changes cause problems during future laboratory exercises.
 
+### Screenshot
+
+![VirtualBox Snapshot](./virtualbox-snapshot.png)
+
 ---
 
 ## Lab Verification Summary
@@ -275,16 +319,6 @@ The following checks were completed successfully:
 | Virtual Machine Snapshot | Created |
 
 The laboratory environment was successfully configured and verified for cybersecurity training activities.
-
----
-
-The installed version was:
-
-```text
-Nmap version 7.99
-```
-
-This confirmed that Nmap was available and working in the Kali Linux environment.
 
 ---
 
@@ -344,8 +378,6 @@ Through this lab setup, I learned how to:
 - Troubleshoot basic networking and terminal configuration issues.
 
 This lab provided practical experience in preparing a controlled environment for future cybersecurity exercises.
-
----
 
 ---
 
